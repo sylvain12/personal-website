@@ -1,8 +1,9 @@
 import { Elysia } from "elysia";
 import { blog } from './app/blog';
+import { home } from './app/home';
 
 const app = new Elysia()
-.get("/", () => "Personal website version 2")
+.use(home)
 .use(blog)
 .listen(3000);
 
